@@ -6,7 +6,7 @@ const initialState: WeatherState = {
     error:''
 }
 
-export default( state = initialState, action: WeatherAction ): WeatherState => {
+export default ( state = initialState, action: WeatherAction ): WeatherState => {
     switch(action.type){
         case GET_WEATHER:
             return{

@@ -24,4 +24,6 @@ const Alert: FC<AlertProps> = ({message, onClose}) => {
     );
 } 
 
+
+
 export default Alert

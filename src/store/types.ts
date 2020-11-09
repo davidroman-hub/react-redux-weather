@@ -29,6 +29,7 @@ export interface WeatherData {
         pressure:number;
         temp_min:number;
         temp_max:number;
+        temp:number
     };
     name:string;
     sys:{

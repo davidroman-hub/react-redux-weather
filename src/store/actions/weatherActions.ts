@@ -10,7 +10,6 @@ import {
         GET_WEATHER,
         SET_LOADING,
         SET_ERROR,
-        WeatherState
     
     } from '../types'
 
@@ -21,7 +20,7 @@ export const getWeather = ( city :string): ThunkAction<void, RootState,null, Wea
             //dipatch = call the action
         return async dispatch => {
             try{                                 // api.openweathermap.org/data/2.5/weather?id=2172797&appid={API key} <== This is the API
-                const response = await fetch(`api.openweathermap.org/data/2.5/weather?id=${city}&appid=${process.env.REACT_APP_API_KEY}`);
+                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3b079139eab43257055af940be340dc4`);
                 // if we dont have response => 
                 if(!response.ok){
                     const responseData: WeatherError = await response.json();
